@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>博勋的博客</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+</head>
+<body>
+<div id="wrapper">
+	<div id="root">
+		<% include include/mobile-header %> 
+		<% include include/side %>
+		<div class="main">
+			<div class="main-blogs">
+				<!-- *10 -->
+				<% for(var i = 0;i < blogs.length;i++) { %>
+					<div class="blogSection">
+						<a href="/article/<%=blogs[i].num%>"><h2 class="title"><%=blogs[i].title%></h2></a>
+						<p class="descr"><%=blogs[i].descr%></p>
+						<span>
+							<font class="time"><%=blogs[i].time%></font>
+							<a href="/article/<%=blogs[i].num%>" class="read">阅读全文>></a>
+						</span>
+					</div>
+				<%}%>
+				<div class="blog-nav">
+					<a href="">上一页</a>
+					<a href="">其他</a>
+					<a href="">下一页</a>
+				</div>
+			</div>
+			<% include include/footer %>
+		</div>
+	</div>
+</div>
+</body>
+</html>

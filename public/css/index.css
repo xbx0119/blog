@@ -1,0 +1,227 @@
+@-webkit-keyframes titleAnimation {
+  0% {
+    background-position: 0 0; }
+  to {
+    background-position: -100% 0; } }
+.mobile-header {
+  display: none;
+  background: #373E40;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  transition: margin-left 1s;
+  -webkit-transition: margin-left 1s;
+  /* Safari */ }
+  .mobile-header .mobile-button {
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px; }
+    .mobile-header .mobile-button span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      background: #fff; }
+  .mobile-header h1 {
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: 1px;
+    color: #FAFBFB;
+    color: rgba(255, 255, 255, 0.65);
+    background-image: -webkit-linear-gradient(left, #5579ED, #71FF5E 25%, #5579ED 50%, #71FF5E 75%, #5579ED) !important;
+    -webkit-text-fill-color: transparent !important;
+    -webkit-background-clip: text !important;
+    -webkit-background-size: 200% 100% !important;
+    -webkit-animation: titleAnimation 3s infinite linear !important; }
+
+@media screen and (max-width: 900px) {
+  .mobile-header {
+    display: block; } }
+.side {
+  display: flex;
+  flex-direction: column;
+  flex: 0;
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  overflow: auto;
+  background: #373E40;
+  transition: left 1s;
+  -webkit-transition: left 1s;
+  /* Safari */ }
+  .side .side-person {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    min-height: 150px;
+    text-align: center; }
+    .side .side-person img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto; }
+    .side .side-person h1 {
+      font-size: 1.8em;
+      font-weight: normal;
+      margin-top: 15px;
+      color: #FAFBFB;
+      color: rgba(255, 255, 255, 0.65);
+      background-image: -webkit-linear-gradient(left, #5579ED, #71FF5E 25%, #5579ED 50%, #71FF5E 75%, #5579ED) !important;
+      -webkit-text-fill-color: transparent !important;
+      -webkit-background-clip: text !important;
+      -webkit-background-size: 200% 100% !important;
+      -webkit-animation: titleAnimation 3s infinite linear !important; }
+    .side .side-person p {
+      color: #8192D6;
+      line-height: 30px;
+      color: #FAFBFB;
+      color: rgba(255, 255, 255, 0.65);
+      background-image: -webkit-linear-gradient(left, #5579ED, #71FF5E 25%, #5579ED 50%, #71FF5E 75%, #5579ED) !important;
+      -webkit-text-fill-color: transparent !important;
+      -webkit-background-clip: text !important;
+      -webkit-background-size: 200% 100% !important;
+      -webkit-animation: titleAnimation 3s infinite linear !important; }
+  .side .nav {
+    text-align: center; }
+    .side .nav ul.first-rank {
+      width: 100%; }
+      .side .nav ul.first-rank > li {
+        margin-bottom: 15px; }
+      .side .nav ul.first-rank > li a h2 {
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        color: #FFFAFA;
+        font-weight: normal;
+        font-size: 1.2em;
+        text-align: center; }
+      .side .nav ul.first-rank .second-rank li {
+        text-align: center;
+        height: 30px;
+        line-height: 30px; }
+      .side .nav ul.first-rank .second-rank a {
+        color: #ccc; }
+
+@media screen and (max-width: 900px) {
+  .side {
+    width: 80%;
+    position: fixed;
+    left: -80%;
+    top: 0px; }
+    .side .side-person {
+      margin-top: 30px;
+      margin-bottom: 30px; }
+      .side .side-person img {
+        width: 100px;
+        height: 100px; }
+      .side .side-person h1 {
+        font-size: 1.5em; }
+
+  .side-mobile {
+    display: flex;
+    left: 0%; } }
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-left: 280px;
+  transition: margin-left 1s;
+  -webkit-transition: margin-left 1s;
+  /* Safari */ }
+  .main > div {
+    width: 94%;
+    margin-left: 3%; }
+  .main .footer {
+    display: flex;
+    flex: 0;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    height: 80px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    background: #fff; }
+    .main .footer p {
+      height: 35px;
+      line-height: 35px; }
+
+.main .main-blogs > div {
+  width: 100%;
+  box-sizing: border-box; }
+.main .main-blogs .blogSection {
+  max-height: 400px;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  padding-top: 25px;
+  padding-bottom: 25px; }
+  .main .main-blogs .blogSection .title {
+    font-size: 1.8em;
+    color: #333;
+    font-weight: normal;
+    line-height: 40px;
+    margin-bottom: 10px; }
+  .main .main-blogs .blogSection .descr {
+    color: #666;
+    font-size: 1.2em;
+    line-height: 30px; }
+  .main .main-blogs .blogSection span {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; }
+    .main .main-blogs .blogSection span .time {
+      color: #333;
+      font-weight: 300; }
+    .main .main-blogs .blogSection span .read {
+      margin-right: 5px;
+      color: #7bbfea; }
+.main .main-blogs .blog-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  .main .main-blogs .blog-nav a {
+    color: #7bbfea; }
+
+@media screen and (max-width: 900px) {
+  .main {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 60px; }
+
+  .move-right {
+    margin-left: 80%; } }
+.article {
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 20px; }
+  .article .title {
+    font-weight: normal;
+    font-size: 1.8em;
+    color: #444;
+    line-height: 45px;
+    min-height: 45px;
+    max-height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .article .time {
+    font-weight: 300;
+    line-height: 30px;
+    color: #555; }
+  .article .content {
+    width: 100%;
+    min-height: 500px;
+    margin-top: 20px;
+    color: #555;
+    font-size: 1.1em; }
+
+/*# sourceMappingURL=index.css.map */

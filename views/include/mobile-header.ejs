@@ -1,0 +1,15 @@
+<div class="mobile-header">
+	<div class="mobile-button">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<h1>博勋的博客</h1>
+	<script type="text/javascript">
+		document.querySelector('.mobile-button').addEventListener('click', function(){
+			document.querySelector('.side').classList.toggle('side-mobile');
+			document.querySelector('.main').classList.toggle('move-right');
+			document.querySelector('.mobile-header').classList.toggle('move-right');
+		})
+	</script>
+</div>
