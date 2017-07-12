@@ -3,14 +3,19 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var bodyParser = require('body-parser');
 
 
 // mongodb
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://127.0.0.1/blog', {
-	useMongoClient: true
+
+
+var dbURL = 'mongodb://localhost/blog';
+mongoose.connect(dbURL, {
+	useMongoClient: true,
+  auth: {authdb:"admin"}
 }, function(err) {
 	if(err) {
 		console.log("failed to connect mongodb");
@@ -38,6 +43,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  cookie: {maxAge: 60 * 1000 * 30}, //设置过期时间
+  resave: true, // don't save session if unmodified
+  saveUninitialized: false, // don't create session until something stored
+  secret: 'blog'
+}));
+
 
 app.use('/', routers);
 

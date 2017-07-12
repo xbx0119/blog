@@ -25,7 +25,8 @@ router.get('/links', LinksController);
 router.get('/about', AboutController);
 
 router.get('/admin', AdminController.index);
-router.get('/login', AdminController.login);
+router.get('/admin/login', AdminController.login);
+router.post('/admin/doLogin', AdminController.doLogin);
 
 
 

@@ -1,12 +1,25 @@
 blog：{
-  "aid": 1,
+  "num": 1,
   "title": "string",
-  "time": "2017-7-7  14:25",
+  "time": "date",
   "location": "string",
+  "descr": "string",
+  "category": "string",
   "article": "string",
-  "comments": [comments]
+  "comments": []
 }
 
 comments: {
 
 }
+
+
+category: 
+1.读书笔记
+2.前段开发者
+3.JavaScript
+4.计算机基础
+5.英文翻译
+6.随想
+
+
