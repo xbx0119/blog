@@ -89,3 +89,142 @@
 	}
 }
 
+.writeblog {
+	width: 100%;
+	height: 100%;
+	flex: 0;
+	display: flex;
+	margin-left: 0;
+
+	form {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		.option-area {
+			width: 100%;
+			height: 100px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items:center;
+
+			input[type='text'] {
+				height: 60px;
+				width: 70%;
+				padding: 15px;
+				font-size: 2em;
+				box-sizing: border-box;
+				border: 0px;
+				color: #666;
+			}
+			.next {
+				width: 130px;
+				height: 40px;
+				line-height: 40px;
+				font-size: 1.2em;
+				color: #fff;
+				background: #B31800;
+				border: 0px;
+
+			}
+		}
+
+		.editor-area {
+			display: flex;
+			flex: 1;
+			width: 100%;
+			height: calc(100% - 100px);
+
+			#editormd {
+				width: 100%;
+				height: 100%;
+				box-sizing: border-box;
+			}
+		}
+	}
+
+	.model .model-content {
+		.model-menu {
+			width: 100%;
+			height: 50px;
+			padding-left: 4%;
+			padding-right: 4%;
+			border-bottom: 1px solid #ddd;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items:center;
+
+			h2 {
+				width: 80%;
+				font-size: 1.2em;
+				color: #666;
+				font-weight: normal;
+			}
+			.close{
+				cursor: pointer;
+			}
+			.close:after {
+				content: '\ea0f';
+				font-family: "icon";
+				color: #888;
+			}
+		}	
+		.model-input {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			span {
+				width: 100%;
+				height: 60px;
+				display: flex;
+				align-items: center;
+
+				select {
+					height: 30px;
+					margin-right: 20px;
+				}
+				input {
+					height: 30px;
+					padding: 5px;
+					box-sizing: border-box;
+				}
+			}
+
+			textarea {
+				width: 100%;
+				height: 200px;
+				resize: none;
+				border: 1px solid #ddd;
+				box-sizing: border-box;
+				padding: 8px;
+
+			}
+		}
+		.model-operate {
+			height: 60px;
+			margin-top: 30px;
+			display: flex;
+			justify-content: flex-end;
+
+			button {
+				width: 100px;
+				height: 30px;
+				color: #fff;
+				border: 0px;
+				font-size: 1.0em;
+				cursor: pointer;
+			}
+			.cancle {
+				background: #ccc;
+				margin-right: 10px;
+			}
+			.confirm {
+				background: #B31800;
+			}
+		}
+	}
+}

@@ -131,6 +131,17 @@
 #markdown * {
   box-sizing: border-box;
 }
+
+#markdown ul,ol,dl {
+  width: 100%;
+  padding-left: 2em;
+  box-sizing: border-box;
+}
+#markdown li {
+  font-size: 1.1em;
+  color: #666;
+}
+
 #markdown h1,
 #markdown h2,
 #markdown h3,
@@ -160,8 +171,9 @@
 #markdown pre.prettyprint,
 #markdown blockquote {
   margin: 0 0 1.1em;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.6em;
+  color: #444;
 }
 #markdown hr {
   margin: 2em 0;
@@ -188,6 +200,7 @@
 }
 #markdown blockquote p {
   line-height: 1.25;
+  color: #666;
 }
 #markdown blockquote p:last-child {
   margin-bottom: 0;

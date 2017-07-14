@@ -65,4 +65,109 @@
         font-size: 1.2em;
         background: #56A36C; }
 
+.writeblog {
+  width: 100%;
+  height: 100%;
+  flex: 0;
+  display: flex;
+  margin-left: 0; }
+  .writeblog form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
+    .writeblog form .option-area {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      .writeblog form .option-area input[type='text'] {
+        height: 60px;
+        width: 70%;
+        padding: 15px;
+        font-size: 2em;
+        box-sizing: border-box;
+        border: 0px;
+        color: #666; }
+      .writeblog form .option-area .next {
+        width: 130px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2em;
+        color: #fff;
+        background: #B31800;
+        border: 0px; }
+    .writeblog form .editor-area {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: calc(100% - 100px); }
+      .writeblog form .editor-area #editormd {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box; }
+  .writeblog .model .model-content .model-menu {
+    width: 100%;
+    height: 50px;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .writeblog .model .model-content .model-menu h2 {
+      width: 80%;
+      font-size: 1.2em;
+      color: #666;
+      font-weight: normal; }
+    .writeblog .model .model-content .model-menu .close {
+      cursor: pointer; }
+    .writeblog .model .model-content .model-menu .close:after {
+      content: '\ea0f';
+      font-family: "icon";
+      color: #888; }
+  .writeblog .model .model-content .model-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .writeblog .model .model-content .model-input span {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center; }
+      .writeblog .model .model-content .model-input span select {
+        height: 30px;
+        margin-right: 20px; }
+      .writeblog .model .model-content .model-input span input {
+        height: 30px;
+        padding: 5px;
+        box-sizing: border-box; }
+    .writeblog .model .model-content .model-input textarea {
+      width: 100%;
+      height: 200px;
+      resize: none;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      padding: 8px; }
+  .writeblog .model .model-content .model-operate {
+    height: 60px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end; }
+    .writeblog .model .model-content .model-operate button {
+      width: 100px;
+      height: 30px;
+      color: #fff;
+      border: 0px;
+      font-size: 1.0em;
+      cursor: pointer; }
+    .writeblog .model .model-content .model-operate .cancle {
+      background: #ccc;
+      margin-right: 10px; }
+    .writeblog .model .model-content .model-operate .confirm {
+      background: #B31800; }
+
 /*# sourceMappingURL=admin.css.map */

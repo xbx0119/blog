@@ -11,7 +11,6 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-
 var dbURL = 'mongodb://localhost/blog';
 mongoose.connect(dbURL, {
 	useMongoClient: true,

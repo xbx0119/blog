@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>博勋的博客</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/admin.css">
+	<link rel="stylesheet" href="/mdEditor/css/editormd.min.css" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="root">
+		<% include ../include/mobile-header %> 
+		<% include adminSide %>
+		<div class="main">
+			<div class="writeblog">
+				<form>
+					<div class="option-area">
+						<input type="text" name="title" placeholder="标题">
+						<input type="button" value="发表博客" class="next">
+					</div>
+					<div class="editor-area">
+						<div id="editormd">
+							<textarea style="display:none;"></textarea>
+						</div>
+						<script src="/js/jquery.min.js"></script>
+						<script src="/mdEditor/editormd.min.js"></script>
+						<script type="text/javascript">
+					        var editor = editormd("editormd", {
+					            width  : "100%",
+					    		height : "98%",
+					    		saveHTMLToTextarea : false,
+					            path : "/mdEditor/lib/" 
+					        });
+						</script>
+					</div>
+				</form>
+				<div class="model">
+					<div class="model-content">
+						<div class="model-menu">
+							<h2>博客详情 摘要</h2>
+							<font class="close"></font>
+						</div>
+						<div class="model-input">
+							<span>
+								<select name="category" class="category">
+									<option>博客分类</option>
+									<%for(var i = 0;i < categorys.length;i++) {%>
+										<option value="<%=categorys[i].code%>"><%=categorys[i].name%></option>
+									<%}%>
+								</select>
+								<input type="text" name="location" placeholder="写作地点">
+							</span>
+							<textarea name="descr"></textarea>
+						</div>
+						<div class="model-operate">
+							<button class="cancle">取消</button>
+							<button class="confirm">确定</button>
+						</div>
+					</div>
+					<div class="model-mask"></div>
+					<script>
+						var	next = document.querySelector(".next"),
+							model = document.querySelector(".model"),
+							close = document.querySelector(".close"),
+							cancle = document.querySelector(".cancle"),
+							confirm = document.querySelector(".confirm"),
+							category = document.querySelector(".category");
+
+						next.addEventListener('click', function() {
+							model.classList.toggle("model-show");
+						})
+
+						close.addEventListener('click', function() {
+							model.classList.toggle("model-show");
+						});
+						cancle.addEventListener('click', function() {
+							model.classList.toggle("model-show");
+						})
+					</script>
+				</div>
+				<script type="text/javascript">
+					confirm.addEventListener('click', function(e) {
+						var data = {
+							title: document.querySelector("input[name='title']").value,
+							location: document.querySelector("input[name='location']").value,
+							descr: document.querySelector("textarea[name='descr']").value,
+							article: editor.getMarkdown(),
+							category: category.options[category.selectedIndex].value
+						};
+						finalSubmit(data);
+					})
+
+					function finalSubmit(data) {
+						for(item in data) {
+							if(!data[item]) {
+								alert("请将信息填写完毕！");
+								return false;
+							}
+						}
+
+						$.post('/admin/submitBlog', data, function(res) {
+							if(res) {
+								window.location.href = "/article/" + res.num;
+							}else {
+								alert("保存失败，请重新编辑");
+							}
+						})
+					}
+				</script>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

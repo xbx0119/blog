@@ -21,15 +21,15 @@
 						<a href="/article/<%=blogs[i].num%>"><h2 class="title"><%=blogs[i].title%></h2></a>
 						<p class="descr"><%=blogs[i].descr%></p>
 						<span>
-							<font class="time"><%=blogs[i].time%></font>
+							<font class="time">【<%=blogs[i].location%>】 <%=blogs[i].date%></font>
 							<a href="/article/<%=blogs[i].num%>" class="read">阅读全文>></a>
 						</span>
 					</div>
 				<%}%>
 				<div class="blog-nav">
-					<a href="">上一页</a>
-					<a href="">其他</a>
-					<a href="">下一页</a>
+					<% if(prevPage > 0) { %><a href="/index/<%=prevPage%>" class="prevPage">上一页</a><%}%>
+					<!-- <a href="">其他</a> -->
+					<% if(nextPage > 0) { %><a href="/index/<%=nextPage%>" class="nextPage">下一页</a><%}%>
 				</div>
 			</div>
 			<% include include/footer %>
