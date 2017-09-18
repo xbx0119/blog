@@ -18,7 +18,6 @@ exports.index = async function(req, res, next) {
 	if(!data) {
 		next();
 	}
-	data.date = data.date.toUTCString();
 	data.article = marked(data.article);
 	resData = data;
   	res.render('article', resData);

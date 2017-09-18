@@ -1,7 +1,7 @@
 var Blog = require('../models/blogModel');
 var lib = require('../lib');
 
-exports.index =  async function(req, res, next) {
+exports.index = async function(req, res, next) {
 	// 返回数据
 	var resData = {};
 	var data;
@@ -21,9 +21,6 @@ exports.index =  async function(req, res, next) {
 	}
 	if(!data) {
 		next();
-	}
-	for(var i = 0;i < data.length;i++) {
-		data[i].date = data[i].date.toUTCString();
 	}
 	resData.blogs = data;
 

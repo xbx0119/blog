@@ -126,6 +126,8 @@ h1, h2 {
       -webkit-animation: titleAnimation 3s infinite linear !important; }
   .side .nav {
     text-align: center; }
+    .side .nav ul li {
+      list-style-type: none; }
     .side .nav ul.first-rank {
       width: 100%; }
       .side .nav ul.first-rank > li {

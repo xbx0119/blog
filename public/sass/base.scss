@@ -16,6 +16,7 @@ html, body {
 	font-family: "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
 
 }
+
 a {
 	// color: #000;
 	text-decoration: none;
@@ -170,6 +171,10 @@ $titleColor: -webkit-linear-gradient(left,#5579ED,#71FF5E 25%,#5579ED 50%,#71FF5
 	}
 	.nav {
 		text-align: center;
+ 
+ 		ul li {
+ 			list-style-type: none;
+ 		}
 
 		ul.first-rank {
 			width: 100%;

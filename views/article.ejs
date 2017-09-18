@@ -17,7 +17,7 @@
 		<div class="main">
 			<div class="article">
 				<h1 class="title"><%=title%></h1>
-				<p class="time">写于【<%=location%>】 <%=date%></p>
+				<p class="time">写于【<%=location%>】 <%=date.toLocaleString()%></p>
 				<div class="content" id="markdown">
 					<%- article%>
 				</div>

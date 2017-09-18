@@ -266,17 +266,23 @@
   background-color: rgba(128, 128, 128, 0.05);
   border: 1px solid rgba(128, 128, 128, 0.075);
   border-radius: 0;
-  overflow-x: auto; }
+  overflow-x: auto;
+  max-width: 100%; }
 
 #markdown pre code {
+  width: 100%;
   padding: 0;
   font-size: inherit;
   color: inherit;
-  white-space: pre;
-  word-wrap: normal;
+  white-space: pre-wrap;
+  word-wrap: break-word;
   background-color: transparent;
   border-radius: 0; }
 
+@media screen and (max-width: 600px) {
+  #markdown pre code {
+    white-space: pre;
+    word-wrap: break-word; } }
 #markdown .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll; }
@@ -322,5 +328,13 @@
 
 #markdown .prettyprint .pre-numbering li {
   padding: 0 5px; }
+
+#markdown p {
+  white-space: pre-wrap;
+  word-wrap: normal;
+  word-break: break-all; }
+
+#markdown p img {
+  max-width: 100%; }
 
 /*# sourceMappingURL=markdown.css.map */

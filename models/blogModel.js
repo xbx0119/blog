@@ -18,6 +18,9 @@ Blog.findAllBlogs = async function() {
 	]);
 
 	if(data) {
+		data.forEach(function(item, index, arr) {
+			arr[index].date = arr[index].date.toLocaleString()
+		});
 		return data;
 	}else {
 		console.log("data false");
@@ -36,6 +39,9 @@ Blog.selectBlogs = async function(page) {
 	]);
 
 	if(data) {
+		data.forEach(function(item, index, arr) {
+			arr[index].date = arr[index].date.toLocaleString()
+		});
 		return data;
 	}else {
 		console.log("data false");
@@ -73,6 +79,9 @@ Blog.selectCategory = async function(category) {
 	]);
 
 	if(data) {
+		data.forEach(function(item, index, arr) {
+			arr[index].date = arr[index].date.toLocaleString()
+		});
 		return data;
 	}else {
 		console.log("data false");
