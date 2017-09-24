@@ -14,7 +14,8 @@
     "ejs": "^2.5.6",
     "express": "~4.15.2",
     "express-session": "^1.15.3",
-    "marked": "^0.3.6",
+    "markdown-it": "^8.4.0",
+    "markdown-it-toc-and-anchor": "^4.1.2",
     "mongoose": "^4.11.1",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"

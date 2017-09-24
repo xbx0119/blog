@@ -1,4 +1,14 @@
-var marked = require('marked');
+var MarkdownIt = require('markdown-it'),
+    markdownItTocAndAnchor = require('markdown-it-toc-and-anchor').default;
+
+var md = new MarkdownIt({
+			html: true,
+		    linkify: true,
+		    typography: true,
+		}).use(markdownItTocAndAnchor, {
+	    	// ...options
+	    	anchorLink: false
+	    });
 
 var Blog = require('../models/blogModel');
 var Category = require('../models/categoryModel');
@@ -18,7 +28,7 @@ exports.index = async function(req, res, next) {
 	if(!data) {
 		next();
 	}
-	data.article = marked(data.article);
+	data.article = md.render(data.article);;
 	resData = data;
   	res.render('article', resData);
 }
